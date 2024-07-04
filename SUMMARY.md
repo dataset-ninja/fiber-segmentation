@@ -1,4 +1,4 @@
-**Fiber Segmentation Dataset** is a dataset for an instance segmentation task. It is used in the manufacturing industry. 
+**Fiber Segmentation Dataset** is a dataset for instance segmentation, semantic segmentation, and object detection tasks. It is used in the manufacturing and construction industries. 
 
 The dataset consists of 10941 images with 699597 labeled objects belonging to 1 single class (*polyethylene fiber*).
 
