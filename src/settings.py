@@ -15,16 +15,20 @@ from dataset_tools.templates import (
 ##################################
 PROJECT_NAME: str = "Fiber Segmentation"
 PROJECT_NAME_FULL: str = "Fiber Segmentation Dataset"
-HIDE_DATASET = True  # set False when 100% sure about repo quality
+HIDE_DATASET = False  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
 ##################################
 LICENSE: License = License.Unknown()
-APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Manufacturing()]
-CATEGORY: Category = Category.Manufacturing()
+APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Manufacturing(), Industry.Construction()]
+CATEGORY: Category = Category.Manufacturing(extra=Category.Construction())
 
-CV_TASKS: List[CVTask] = [CVTask.InstanceSegmentation()]
+CV_TASKS: List[CVTask] = [
+    CVTask.InstanceSegmentation(),
+    CVTask.SemanticSegmentation(),
+    CVTask.ObjectDetection(),
+]
 ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.InstanceSegmentation()]
 
 RELEASE_DATE: Optional[str] = None  # e.g. "YYYY-MM-DD"
